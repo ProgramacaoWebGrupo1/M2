@@ -2,7 +2,7 @@
 
 Repository to host the project developed for Programação Web, a second year subject at ISMAI. Developed by Group 1 : [@Mascarenhas22](https://github.com/Mascarenhas22), [@Daniel-Ferreira-Dias] (https://github.com/Daniel-Ferreira-Dias).
 
-Introdução
+## Introdução
   O objetivo deste trabalho prático de avaliação é expor os alunos ao estudo, desenho e desenvolvimento de aplicações e
   serviços Web com aplicação e demonstração dos conhecimentos e competências adquiridas na disciplina.
   O trabalho deve ser desenvolvido em grupo durante o período letivo com acompanhamento regular pelo docente. Cada
@@ -15,7 +15,7 @@ Introdução
   elementos do grupo caso a situação preferencial não seja possível.
   A classificação deste momento de avaliação só é atribuída após o integral cumprimento de ambos os requisitos (a
   entrega e a apresentação).
-Enunciado
+## Enunciado
   Defina o tema do seu trabalho em conjunto com o docente. Prepare a base de dados de suporte aos seus serviços e
   preencha a base de dados com dados suficientes para a apresentação do seu trabalho. Considera-se que 30 registos por
   tabela é um volume de dados suficiente.
@@ -31,12 +31,12 @@ Enunciado
     7. Disponibilizar uma ‘Collection’ para o Postman para consulta dos recursos;
     8. Utilização do MySQL como SGBD;
     9. Utilização de Node.js como servidor aplicacional para implemnetação da camada de serviços.
-Valoriza-se o desenvolvimento/utilização de:
+## Valoriza-se o desenvolvimento/utilização de:
     1. Filtros através de parâmetros HTTP;
     2. Utilização de relação de cardinalidade m:n entre dois dos recusros;
     3. Possibilidade de seleccionar o tipo de representação pretendida através do cabeçalho HTTP Accept (suporte
        por exemplo para XML);
-Conteúdos a entregar
+## Conteúdos a entregar
     Os alunos devem entregar no portal da disciplina os originais do desenvolvimento do trabalho e a documentação
     necessária para operacionalizar e avaliar os resultados obtidos.
 
