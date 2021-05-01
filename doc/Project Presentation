@@ -5,7 +5,7 @@ Grupo 1
 Proposta de trabalho: Criação de stand automóvel.
 Tabelas: Marca, Carro, Fornecedor.
 Atributos:
-!["Imagem estrutura"(doc/images/Estrutura.png)]
+!["Imagem estrutura"](doc/images/Estrutura.png)
 
 Cardinalidade (m:n): Vários Fornecedores para vários carros.
 Cardinalidade (n:1): Vários Carros para uma Marca.
