@@ -79,7 +79,7 @@ _Did you use any aditional libraries? Describe them here._
 _Please add at least on section (a file) per Chapter. But you can add more._
 
 ### Project presentation
-* Chapter 1: [Project presentation](doc/projectpresentation.md)
+* Chapter 1: [Project presentation](doc/c1.md)
 ### User Interface 
 * Chapter 2: [User Interface Prototype and Sitemap](doc/c2.md)
 ### Product
