@@ -7,7 +7,7 @@ Tabelas: Marca, Carro, Fornecedor.
 Atributos:
 !["Imagem estrutura"](M2/doc/images/Estrutura.png)
 
-<img src = "">
+<img src = "M2/doc/images/Estrutura.png">
 
 Cardinalidade (m:n): Vários Fornecedores para vários carros.
 Cardinalidade (n:1): Vários Carros para uma Marca.
