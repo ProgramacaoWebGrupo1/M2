@@ -7,7 +7,7 @@ Tabelas: Marca, Carro, Fornecedor.
 Atributos:
 
 [[doc/images/Estrutura.png]]
-![](../../images/Estrutura.jpg)
+![](images/Estrutura.jpg)
 
 
 Cardinalidade (m:n): Vários Fornecedores para vários carros.
