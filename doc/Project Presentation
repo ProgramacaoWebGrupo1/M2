@@ -6,8 +6,9 @@ Proposta de trabalho: Criação de stand automóvel.
 Tabelas: Marca, Carro, Fornecedor.
 Atributos:
 
+<br>
 !["Imagem estrutura"](doc/images/Estrutura.png)
-
+<br>
 <img src = "M2/doc/images/Estrutura.png">
 
 Cardinalidade (m:n): Vários Fornecedores para vários carros.
