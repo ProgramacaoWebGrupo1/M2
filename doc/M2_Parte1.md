@@ -1,6 +1,6 @@
 <h1>Programação Web</h1>
-Trabalho nº2. Parte 1
-Grupo 1
+<h2>Trabalho nº2. Parte 1</h2>
+<h2>Grupo 1</h2>
 
 Proposta de trabalho: Criação de stand automóvel.
 
