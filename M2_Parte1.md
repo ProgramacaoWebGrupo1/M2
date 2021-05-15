@@ -22,9 +22,10 @@ A tabela Fornecedores contém (Id, NomeFornecedor e Stock). Utilizamos o Id como
 
 ![An alternative description](images/Estrutura1.png)
 
-Cardinalidade (m:n): Vários Fornecedores para vários carros.
 
-Cardinalidade (n:1): Vários Carros para uma Marca. Vários carros para uma lista de preferências.
+Cardinalidade (m:n): Vários Fornecedores para vários carros. Vários veículos podem estar em várias listas de preferência.
+
+Cardinalidade (n:1): Vários Carros para uma Marca. 
 
 Cardinalidade (1:1): Uma lista de preferências para um cliente.
 
