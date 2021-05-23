@@ -20,7 +20,7 @@ A tabela Fornecedores contém (Id, NomeFornecedor e Stock). Utilizamos o Id como
 
 
 
-![An alternative description](images/Estrutura.png)
+![An alternative description](images/Estrutura1.png)
 
 
 Cardinalidade (m:n): Vários Fornecedores para vários carros. Vários veículos podem estar em várias listas de preferência.
