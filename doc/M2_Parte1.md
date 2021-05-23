@@ -8,7 +8,7 @@ Tabelas: Marca, Carro, Fornecedor, Cliente, Lista de preferências.
 
 Atributos: Neste projeto criamos as seguintes tabelas que se interligam da seguinte forma.
 
-A tabela Cliente que contem (id, Nome, Contacto e Nif), esta tabela estabelece uma relação de cardinalidade (1:1) com a tabela Lista de preferências. Utilizamos o Id como chave primaria.
+A tabela Cliente que contem (id, Nome, Contacto e Nif), esta tabela estabelece uma relação de cardinalidade (1:n) com a tabela Lista de preferências. Utilizamos o Id como chave primaria.
 
 A tabela Lista de preferências contém (Id, Categoria e Preço), esta tabela guarda a lista de preferências do cliente e estabelece uma ligação de cardinalidade (1:n) com a tabela carro, visto que poderá haver vários carros que correspondem às preferências do cliente. Utilizamos a categoria e o preço como chaves estrangeiras na tabela Lista de preferências. Utilizamos o Id como chave primaria.
 
