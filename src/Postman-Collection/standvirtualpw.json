@@ -1,0 +1,4085 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "lb4-standvirtualpw",
+    "version": "0.0.1",
+    "description": "Este projeto trata-se de um stand virtual para a venda e importação de carros.",
+    "contact": {}
+  },
+  "paths": {
+    "/carros/count": {
+      "get": {
+        "x-controller-name": "CarroController",
+        "x-operation-name": "count",
+        "tags": [
+          "CarroController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Carro model count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/loopback.Count"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "where",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Carro.WhereFilter",
+                  "additionalProperties": true,
+                  "x-typescript-type": "@loopback/repository#Where<Carro>"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "CarroController.count"
+      }
+    },
+    "/carros/{id}/marca": {
+      "get": {
+        "x-controller-name": "CarroMarcaController",
+        "x-operation-name": "getMarca",
+        "tags": [
+          "CarroMarcaController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Marca belonging to Carro",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Marca"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          }
+        ],
+        "operationId": "CarroMarcaController.getMarca"
+      }
+    },
+    "/carros/{id}": {
+      "put": {
+        "x-controller-name": "CarroController",
+        "x-operation-name": "replaceById",
+        "tags": [
+          "CarroController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Carro PUT success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Carro"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "CarroController.replaceById"
+      },
+      "patch": {
+        "x-controller-name": "CarroController",
+        "x-operation-name": "updateById",
+        "tags": [
+          "CarroController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Carro PATCH success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CarroPartial"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "CarroController.updateById"
+      },
+      "get": {
+        "x-controller-name": "CarroController",
+        "x-operation-name": "findById",
+        "tags": [
+          "CarroController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Carro model instance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CarroWithRelations"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Carro.Filter"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "CarroController.findById"
+      },
+      "delete": {
+        "x-controller-name": "CarroController",
+        "x-operation-name": "deleteById",
+        "tags": [
+          "CarroController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Carro DELETE success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          }
+        ],
+        "operationId": "CarroController.deleteById"
+      }
+    },
+    "/carros": {
+      "post": {
+        "x-controller-name": "CarroController",
+        "x-operation-name": "create",
+        "tags": [
+          "CarroController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Carro model instance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Carro"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewCarro"
+              }
+            }
+          }
+        },
+        "operationId": "CarroController.create"
+      },
+      "patch": {
+        "x-controller-name": "CarroController",
+        "x-operation-name": "updateAll",
+        "tags": [
+          "CarroController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Carro PATCH success count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/loopback.Count"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "where",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Carro.WhereFilter",
+                  "additionalProperties": true,
+                  "x-typescript-type": "@loopback/repository#Where<Carro>"
+                }
+              }
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CarroPartial"
+              }
+            }
+          }
+        },
+        "operationId": "CarroController.updateAll"
+      },
+      "get": {
+        "x-controller-name": "CarroController",
+        "x-operation-name": "find",
+        "tags": [
+          "CarroController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Array of Carro model instances",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CarroWithRelations"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Carro.Filter1"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "CarroController.find"
+      }
+    },
+    "/clientes/count": {
+      "get": {
+        "x-controller-name": "ClienteController",
+        "x-operation-name": "count",
+        "tags": [
+          "ClienteController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Cliente model count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/loopback.Count"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "where",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Cliente.WhereFilter",
+                  "additionalProperties": true,
+                  "x-typescript-type": "@loopback/repository#Where<Cliente>"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "ClienteController.count"
+      }
+    },
+    "/clientes/{id}/listadepreferencias": {
+      "post": {
+        "x-controller-name": "ClienteListadepreferenciaController",
+        "x-operation-name": "create",
+        "tags": [
+          "ClienteListadepreferenciaController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Cliente model instance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Listadepreferencia"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewListadepreferenciaInCliente"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "ClienteListadepreferenciaController.create"
+      },
+      "patch": {
+        "x-controller-name": "ClienteListadepreferenciaController",
+        "x-operation-name": "patch",
+        "tags": [
+          "ClienteListadepreferenciaController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Cliente.Listadepreferencia PATCH success count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/loopback.Count"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          },
+          {
+            "name": "where",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Listadepreferencia.WhereFilter",
+                  "additionalProperties": true,
+                  "x-typescript-type": "@loopback/repository#Where<Listadepreferencia>"
+                }
+              }
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ListadepreferenciaPartial"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "ClienteListadepreferenciaController.patch"
+      },
+      "get": {
+        "x-controller-name": "ClienteListadepreferenciaController",
+        "x-operation-name": "find",
+        "tags": [
+          "ClienteListadepreferenciaController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Array of Cliente has many Listadepreferencia",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Listadepreferencia"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "ClienteListadepreferenciaController.find"
+      },
+      "delete": {
+        "x-controller-name": "ClienteListadepreferenciaController",
+        "x-operation-name": "delete",
+        "tags": [
+          "ClienteListadepreferenciaController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Cliente.Listadepreferencia DELETE success count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/loopback.Count"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          },
+          {
+            "name": "where",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Listadepreferencia.WhereFilter",
+                  "additionalProperties": true,
+                  "x-typescript-type": "@loopback/repository#Where<Listadepreferencia>"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "ClienteListadepreferenciaController.delete"
+      }
+    },
+    "/clientes/{id}": {
+      "put": {
+        "x-controller-name": "ClienteController",
+        "x-operation-name": "replaceById",
+        "tags": [
+          "ClienteController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Cliente PUT success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Cliente"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "ClienteController.replaceById"
+      },
+      "patch": {
+        "x-controller-name": "ClienteController",
+        "x-operation-name": "updateById",
+        "tags": [
+          "ClienteController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Cliente PATCH success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClientePartial"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "ClienteController.updateById"
+      },
+      "get": {
+        "x-controller-name": "ClienteController",
+        "x-operation-name": "findById",
+        "tags": [
+          "ClienteController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Cliente model instance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ClienteWithRelations"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Cliente.Filter"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "ClienteController.findById"
+      },
+      "delete": {
+        "x-controller-name": "ClienteController",
+        "x-operation-name": "deleteById",
+        "tags": [
+          "ClienteController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Cliente DELETE success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          }
+        ],
+        "operationId": "ClienteController.deleteById"
+      }
+    },
+    "/clientes": {
+      "post": {
+        "x-controller-name": "ClienteController",
+        "x-operation-name": "create",
+        "tags": [
+          "ClienteController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Cliente model instance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Cliente"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewCliente"
+              }
+            }
+          }
+        },
+        "operationId": "ClienteController.create"
+      },
+      "patch": {
+        "x-controller-name": "ClienteController",
+        "x-operation-name": "updateAll",
+        "tags": [
+          "ClienteController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Cliente PATCH success count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/loopback.Count"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "where",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Cliente.WhereFilter",
+                  "additionalProperties": true,
+                  "x-typescript-type": "@loopback/repository#Where<Cliente>"
+                }
+              }
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClientePartial"
+              }
+            }
+          }
+        },
+        "operationId": "ClienteController.updateAll"
+      },
+      "get": {
+        "x-controller-name": "ClienteController",
+        "x-operation-name": "find",
+        "tags": [
+          "ClienteController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Array of Cliente model instances",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ClienteWithRelations"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Cliente.Filter1"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "ClienteController.find"
+      }
+    },
+    "/fornecedors/count": {
+      "get": {
+        "x-controller-name": "FornecedorController",
+        "x-operation-name": "count",
+        "tags": [
+          "FornecedorController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Fornecedor model count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/loopback.Count"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "where",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Fornecedor.WhereFilter",
+                  "additionalProperties": true,
+                  "x-typescript-type": "@loopback/repository#Where<Fornecedor>"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "FornecedorController.count"
+      }
+    },
+    "/fornecedors/{id}": {
+      "put": {
+        "x-controller-name": "FornecedorController",
+        "x-operation-name": "replaceById",
+        "tags": [
+          "FornecedorController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Fornecedor PUT success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Fornecedor"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "FornecedorController.replaceById"
+      },
+      "patch": {
+        "x-controller-name": "FornecedorController",
+        "x-operation-name": "updateById",
+        "tags": [
+          "FornecedorController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Fornecedor PATCH success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FornecedorPartial"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "FornecedorController.updateById"
+      },
+      "get": {
+        "x-controller-name": "FornecedorController",
+        "x-operation-name": "findById",
+        "tags": [
+          "FornecedorController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Fornecedor model instance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FornecedorWithRelations"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Fornecedor.Filter"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "FornecedorController.findById"
+      },
+      "delete": {
+        "x-controller-name": "FornecedorController",
+        "x-operation-name": "deleteById",
+        "tags": [
+          "FornecedorController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Fornecedor DELETE success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          }
+        ],
+        "operationId": "FornecedorController.deleteById"
+      }
+    },
+    "/fornecedors": {
+      "post": {
+        "x-controller-name": "FornecedorController",
+        "x-operation-name": "create",
+        "tags": [
+          "FornecedorController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Fornecedor model instance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Fornecedor"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewFornecedor"
+              }
+            }
+          }
+        },
+        "operationId": "FornecedorController.create"
+      },
+      "patch": {
+        "x-controller-name": "FornecedorController",
+        "x-operation-name": "updateAll",
+        "tags": [
+          "FornecedorController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Fornecedor PATCH success count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/loopback.Count"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "where",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Fornecedor.WhereFilter",
+                  "additionalProperties": true,
+                  "x-typescript-type": "@loopback/repository#Where<Fornecedor>"
+                }
+              }
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FornecedorPartial"
+              }
+            }
+          }
+        },
+        "operationId": "FornecedorController.updateAll"
+      },
+      "get": {
+        "x-controller-name": "FornecedorController",
+        "x-operation-name": "find",
+        "tags": [
+          "FornecedorController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Array of Fornecedor model instances",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FornecedorWithRelations"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Fornecedor.Filter1"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "FornecedorController.find"
+      }
+    },
+    "/listadepreferencias/count": {
+      "get": {
+        "x-controller-name": "ListadepreferenciaController",
+        "x-operation-name": "count",
+        "tags": [
+          "ListadepreferenciaController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Listadepreferencia model count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/loopback.Count"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "where",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Listadepreferencia.WhereFilter",
+                  "additionalProperties": true,
+                  "x-typescript-type": "@loopback/repository#Where<Listadepreferencia>"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "ListadepreferenciaController.count"
+      }
+    },
+    "/listadepreferencias/{id}/carros": {
+      "post": {
+        "x-controller-name": "ListadepreferenciaCarroController",
+        "x-operation-name": "create",
+        "tags": [
+          "ListadepreferenciaCarroController"
+        ],
+        "responses": {
+          "200": {
+            "description": "create a Carro model instance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Carro"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewCarroInListadepreferencia"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "ListadepreferenciaCarroController.create"
+      },
+      "patch": {
+        "x-controller-name": "ListadepreferenciaCarroController",
+        "x-operation-name": "patch",
+        "tags": [
+          "ListadepreferenciaCarroController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Listadepreferencia.Carro PATCH success count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/loopback.Count"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          },
+          {
+            "name": "where",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Carro.WhereFilter",
+                  "additionalProperties": true,
+                  "x-typescript-type": "@loopback/repository#Where<Carro>"
+                }
+              }
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CarroPartial"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "ListadepreferenciaCarroController.patch"
+      },
+      "get": {
+        "x-controller-name": "ListadepreferenciaCarroController",
+        "x-operation-name": "find",
+        "tags": [
+          "ListadepreferenciaCarroController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Array of Listadepreferencia has many Carro through Favorito",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Carro"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "ListadepreferenciaCarroController.find"
+      },
+      "delete": {
+        "x-controller-name": "ListadepreferenciaCarroController",
+        "x-operation-name": "delete",
+        "tags": [
+          "ListadepreferenciaCarroController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Listadepreferencia.Carro DELETE success count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/loopback.Count"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          },
+          {
+            "name": "where",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Carro.WhereFilter",
+                  "additionalProperties": true,
+                  "x-typescript-type": "@loopback/repository#Where<Carro>"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "ListadepreferenciaCarroController.delete"
+      }
+    },
+    "/listadepreferencias/{id}": {
+      "put": {
+        "x-controller-name": "ListadepreferenciaController",
+        "x-operation-name": "replaceById",
+        "tags": [
+          "ListadepreferenciaController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Listadepreferencia PUT success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Listadepreferencia"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "ListadepreferenciaController.replaceById"
+      },
+      "patch": {
+        "x-controller-name": "ListadepreferenciaController",
+        "x-operation-name": "updateById",
+        "tags": [
+          "ListadepreferenciaController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Listadepreferencia PATCH success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ListadepreferenciaPartial"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "ListadepreferenciaController.updateById"
+      },
+      "get": {
+        "x-controller-name": "ListadepreferenciaController",
+        "x-operation-name": "findById",
+        "tags": [
+          "ListadepreferenciaController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Listadepreferencia model instance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListadepreferenciaWithRelations"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Listadepreferencia.Filter"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "ListadepreferenciaController.findById"
+      },
+      "delete": {
+        "x-controller-name": "ListadepreferenciaController",
+        "x-operation-name": "deleteById",
+        "tags": [
+          "ListadepreferenciaController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Listadepreferencia DELETE success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          }
+        ],
+        "operationId": "ListadepreferenciaController.deleteById"
+      }
+    },
+    "/listadepreferencias": {
+      "post": {
+        "x-controller-name": "ListadepreferenciaController",
+        "x-operation-name": "create",
+        "tags": [
+          "ListadepreferenciaController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Listadepreferencia model instance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Listadepreferencia"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewListadepreferencia"
+              }
+            }
+          }
+        },
+        "operationId": "ListadepreferenciaController.create"
+      },
+      "patch": {
+        "x-controller-name": "ListadepreferenciaController",
+        "x-operation-name": "updateAll",
+        "tags": [
+          "ListadepreferenciaController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Listadepreferencia PATCH success count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/loopback.Count"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "where",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Listadepreferencia.WhereFilter",
+                  "additionalProperties": true,
+                  "x-typescript-type": "@loopback/repository#Where<Listadepreferencia>"
+                }
+              }
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ListadepreferenciaPartial"
+              }
+            }
+          }
+        },
+        "operationId": "ListadepreferenciaController.updateAll"
+      },
+      "get": {
+        "x-controller-name": "ListadepreferenciaController",
+        "x-operation-name": "find",
+        "tags": [
+          "ListadepreferenciaController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Array of Listadepreferencia model instances",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ListadepreferenciaWithRelations"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Listadepreferencia.Filter1"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "ListadepreferenciaController.find"
+      }
+    },
+    "/marcas/count": {
+      "get": {
+        "x-controller-name": "MarcaController",
+        "x-operation-name": "count",
+        "tags": [
+          "MarcaController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Marca model count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/loopback.Count"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "where",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Marca.WhereFilter",
+                  "additionalProperties": true,
+                  "x-typescript-type": "@loopback/repository#Where<Marca>"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "MarcaController.count"
+      }
+    },
+    "/marcas/{id}/carros": {
+      "post": {
+        "x-controller-name": "MarcaCarroController",
+        "x-operation-name": "create",
+        "tags": [
+          "MarcaCarroController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Marca model instance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Carro"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewCarroInMarca"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "MarcaCarroController.create"
+      },
+      "patch": {
+        "x-controller-name": "MarcaCarroController",
+        "x-operation-name": "patch",
+        "tags": [
+          "MarcaCarroController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Marca.Carro PATCH success count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/loopback.Count"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          },
+          {
+            "name": "where",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Carro.WhereFilter",
+                  "additionalProperties": true,
+                  "x-typescript-type": "@loopback/repository#Where<Carro>"
+                }
+              }
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CarroPartial"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "MarcaCarroController.patch"
+      },
+      "get": {
+        "x-controller-name": "MarcaCarroController",
+        "x-operation-name": "find",
+        "tags": [
+          "MarcaCarroController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Array of Marca has many Carro",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Carro"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "MarcaCarroController.find"
+      },
+      "delete": {
+        "x-controller-name": "MarcaCarroController",
+        "x-operation-name": "delete",
+        "tags": [
+          "MarcaCarroController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Marca.Carro DELETE success count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/loopback.Count"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          },
+          {
+            "name": "where",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Carro.WhereFilter",
+                  "additionalProperties": true,
+                  "x-typescript-type": "@loopback/repository#Where<Carro>"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "MarcaCarroController.delete"
+      }
+    },
+    "/marcas/{id}/fornecedors": {
+      "post": {
+        "x-controller-name": "MarcaFornecedorController",
+        "x-operation-name": "create",
+        "tags": [
+          "MarcaFornecedorController"
+        ],
+        "responses": {
+          "200": {
+            "description": "create a Fornecedor model instance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Fornecedor"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewFornecedorInMarca"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "MarcaFornecedorController.create"
+      },
+      "patch": {
+        "x-controller-name": "MarcaFornecedorController",
+        "x-operation-name": "patch",
+        "tags": [
+          "MarcaFornecedorController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Marca.Fornecedor PATCH success count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/loopback.Count"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          },
+          {
+            "name": "where",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Fornecedor.WhereFilter",
+                  "additionalProperties": true,
+                  "x-typescript-type": "@loopback/repository#Where<Fornecedor>"
+                }
+              }
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FornecedorPartial"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "MarcaFornecedorController.patch"
+      },
+      "get": {
+        "x-controller-name": "MarcaFornecedorController",
+        "x-operation-name": "find",
+        "tags": [
+          "MarcaFornecedorController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Array of Marca has many Fornecedor through Lista",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Fornecedor"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "MarcaFornecedorController.find"
+      },
+      "delete": {
+        "x-controller-name": "MarcaFornecedorController",
+        "x-operation-name": "delete",
+        "tags": [
+          "MarcaFornecedorController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Marca.Fornecedor DELETE success count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/loopback.Count"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          },
+          {
+            "name": "where",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Fornecedor.WhereFilter",
+                  "additionalProperties": true,
+                  "x-typescript-type": "@loopback/repository#Where<Fornecedor>"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "MarcaFornecedorController.delete"
+      }
+    },
+    "/marcas/{id}": {
+      "put": {
+        "x-controller-name": "MarcaController",
+        "x-operation-name": "replaceById",
+        "tags": [
+          "MarcaController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Marca PUT success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Marca"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "MarcaController.replaceById"
+      },
+      "patch": {
+        "x-controller-name": "MarcaController",
+        "x-operation-name": "updateById",
+        "tags": [
+          "MarcaController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Marca PATCH success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MarcaPartial"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "MarcaController.updateById"
+      },
+      "get": {
+        "x-controller-name": "MarcaController",
+        "x-operation-name": "findById",
+        "tags": [
+          "MarcaController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Marca model instance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MarcaWithRelations"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Marca.Filter"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "MarcaController.findById"
+      },
+      "delete": {
+        "x-controller-name": "MarcaController",
+        "x-operation-name": "deleteById",
+        "tags": [
+          "MarcaController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Marca DELETE success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          }
+        ],
+        "operationId": "MarcaController.deleteById"
+      }
+    },
+    "/marcas": {
+      "post": {
+        "x-controller-name": "MarcaController",
+        "x-operation-name": "create",
+        "tags": [
+          "MarcaController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Marca model instance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Marca"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewMarca"
+              }
+            }
+          }
+        },
+        "operationId": "MarcaController.create"
+      },
+      "patch": {
+        "x-controller-name": "MarcaController",
+        "x-operation-name": "updateAll",
+        "tags": [
+          "MarcaController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Marca PATCH success count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/loopback.Count"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "where",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Marca.WhereFilter",
+                  "additionalProperties": true,
+                  "x-typescript-type": "@loopback/repository#Where<Marca>"
+                }
+              }
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MarcaPartial"
+              }
+            }
+          }
+        },
+        "operationId": "MarcaController.updateAll"
+      },
+      "get": {
+        "x-controller-name": "MarcaController",
+        "x-operation-name": "find",
+        "tags": [
+          "MarcaController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Array of Marca model instances",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MarcaWithRelations"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Marca.Filter1"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "MarcaController.find"
+      }
+    },
+    "/ping": {
+      "get": {
+        "x-controller-name": "PingController",
+        "x-operation-name": "ping",
+        "tags": [
+          "PingController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Ping Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PingResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PingController.ping"
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "http://[::1]:3000"
+    }
+  ],
+  "components": {
+    "schemas": {
+      "Marca": {
+        "title": "Marca",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "marca": {
+            "type": "string"
+          },
+          "quantidade": {
+            "type": "number"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Carro": {
+        "title": "Carro",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "categoria": {
+            "type": "string"
+          },
+          "nome_marca": {
+            "type": "string"
+          },
+          "modelo": {
+            "type": "string"
+          },
+          "preco": {
+            "type": "number"
+          },
+          "potencia": {
+            "type": "number"
+          },
+          "cor": {
+            "type": "string"
+          },
+          "ano": {
+            "type": "number"
+          },
+          "marcaId": {
+            "type": "number"
+          }
+        },
+        "additionalProperties": false
+      },
+      "NewCarro": {
+        "title": "NewCarro",
+        "type": "object",
+        "description": "(tsType: Omit<Carro, 'id'>, schemaOptions: { title: 'NewCarro', exclude: [ 'id' ] })",
+        "properties": {
+          "categoria": {
+            "type": "string"
+          },
+          "nome_marca": {
+            "type": "string"
+          },
+          "modelo": {
+            "type": "string"
+          },
+          "preco": {
+            "type": "number"
+          },
+          "potencia": {
+            "type": "number"
+          },
+          "cor": {
+            "type": "string"
+          },
+          "ano": {
+            "type": "number"
+          },
+          "marcaId": {
+            "type": "number"
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "Omit<Carro, 'id'>"
+      },
+      "FornecedorWithRelations": {
+        "title": "FornecedorWithRelations",
+        "type": "object",
+        "description": "(tsType: FornecedorWithRelations, schemaOptions: { includeRelations: true })",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "nomefornecedor": {
+            "type": "string"
+          },
+          "stock": {
+            "type": "number"
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "FornecedorWithRelations"
+      },
+      "MarcaWithRelations": {
+        "title": "MarcaWithRelations",
+        "type": "object",
+        "description": "(tsType: MarcaWithRelations, schemaOptions: { includeRelations: true })",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "marca": {
+            "type": "string"
+          },
+          "quantidade": {
+            "type": "number"
+          },
+          "fornecedors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FornecedorWithRelations"
+            }
+          },
+          "carros": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CarroWithRelations"
+            }
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "MarcaWithRelations"
+      },
+      "CarroWithRelations": {
+        "title": "CarroWithRelations",
+        "type": "object",
+        "description": "(tsType: CarroWithRelations, schemaOptions: { includeRelations: true })",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "categoria": {
+            "type": "string"
+          },
+          "nome_marca": {
+            "type": "string"
+          },
+          "modelo": {
+            "type": "string"
+          },
+          "preco": {
+            "type": "number"
+          },
+          "potencia": {
+            "type": "number"
+          },
+          "cor": {
+            "type": "string"
+          },
+          "ano": {
+            "type": "number"
+          },
+          "marcaId": {
+            "type": "number"
+          },
+          "marca": {
+            "$ref": "#/components/schemas/MarcaWithRelations"
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "CarroWithRelations"
+      },
+      "CarroPartial": {
+        "title": "CarroPartial",
+        "type": "object",
+        "description": "(tsType: Partial<Carro>, schemaOptions: { partial: true })",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "categoria": {
+            "type": "string"
+          },
+          "nome_marca": {
+            "type": "string"
+          },
+          "modelo": {
+            "type": "string"
+          },
+          "preco": {
+            "type": "number"
+          },
+          "potencia": {
+            "type": "number"
+          },
+          "cor": {
+            "type": "string"
+          },
+          "ano": {
+            "type": "number"
+          },
+          "marcaId": {
+            "type": "number"
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "Partial<Carro>"
+      },
+      "Listadepreferencia": {
+        "title": "Listadepreferencia",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "categoria": {
+            "type": "string"
+          },
+          "modelo": {
+            "type": "string"
+          },
+          "clienteId": {
+            "type": "number"
+          }
+        },
+        "additionalProperties": false
+      },
+      "NewListadepreferenciaInCliente": {
+        "title": "NewListadepreferenciaInCliente",
+        "type": "object",
+        "description": "(tsType: @loopback/repository-json-schema#Optional<Omit<Listadepreferencia, 'id'>, 'clienteId'>, schemaOptions: { title: 'NewListadepreferenciaInCliente', exclude: [ 'id' ], optional: [ 'clienteId' ] })",
+        "properties": {
+          "categoria": {
+            "type": "string"
+          },
+          "modelo": {
+            "type": "string"
+          },
+          "clienteId": {
+            "type": "number"
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "@loopback/repository-json-schema#Optional<Omit<Listadepreferencia, 'id'>, 'clienteId'>"
+      },
+      "ListadepreferenciaPartial": {
+        "title": "ListadepreferenciaPartial",
+        "type": "object",
+        "description": "(tsType: Partial<Listadepreferencia>, schemaOptions: { partial: true })",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "categoria": {
+            "type": "string"
+          },
+          "modelo": {
+            "type": "string"
+          },
+          "clienteId": {
+            "type": "number"
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "Partial<Listadepreferencia>"
+      },
+      "Cliente": {
+        "title": "Cliente",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "nome": {
+            "type": "string"
+          },
+          "contacto": {
+            "type": "number"
+          },
+          "nif": {
+            "type": "number"
+          }
+        },
+        "additionalProperties": false
+      },
+      "NewCliente": {
+        "title": "NewCliente",
+        "type": "object",
+        "description": "(tsType: Omit<Cliente, 'id'>, schemaOptions: { title: 'NewCliente', exclude: [ 'id' ] })",
+        "properties": {
+          "nome": {
+            "type": "string"
+          },
+          "contacto": {
+            "type": "number"
+          },
+          "nif": {
+            "type": "number"
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "Omit<Cliente, 'id'>"
+      },
+      "ListadepreferenciaWithRelations": {
+        "title": "ListadepreferenciaWithRelations",
+        "type": "object",
+        "description": "(tsType: ListadepreferenciaWithRelations, schemaOptions: { includeRelations: true })",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "categoria": {
+            "type": "string"
+          },
+          "modelo": {
+            "type": "string"
+          },
+          "clienteId": {
+            "type": "number"
+          },
+          "carros": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CarroWithRelations"
+            }
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "ListadepreferenciaWithRelations"
+      },
+      "ClienteWithRelations": {
+        "title": "ClienteWithRelations",
+        "type": "object",
+        "description": "(tsType: ClienteWithRelations, schemaOptions: { includeRelations: true })",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "nome": {
+            "type": "string"
+          },
+          "contacto": {
+            "type": "number"
+          },
+          "nif": {
+            "type": "number"
+          },
+          "listadepreferencia": {
+            "$ref": "#/components/schemas/ListadepreferenciaWithRelations"
+          },
+          "listadepreferencias": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ListadepreferenciaWithRelations"
+            }
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "ClienteWithRelations"
+      },
+      "ClientePartial": {
+        "title": "ClientePartial",
+        "type": "object",
+        "description": "(tsType: Partial<Cliente>, schemaOptions: { partial: true })",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "nome": {
+            "type": "string"
+          },
+          "contacto": {
+            "type": "number"
+          },
+          "nif": {
+            "type": "number"
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "Partial<Cliente>"
+      },
+      "Fornecedor": {
+        "title": "Fornecedor",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "nomefornecedor": {
+            "type": "string"
+          },
+          "stock": {
+            "type": "number"
+          }
+        },
+        "additionalProperties": false
+      },
+      "NewFornecedor": {
+        "title": "NewFornecedor",
+        "type": "object",
+        "description": "(tsType: Omit<Fornecedor, 'id'>, schemaOptions: { title: 'NewFornecedor', exclude: [ 'id' ] })",
+        "properties": {
+          "nomefornecedor": {
+            "type": "string"
+          },
+          "stock": {
+            "type": "number"
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "Omit<Fornecedor, 'id'>"
+      },
+      "FornecedorPartial": {
+        "title": "FornecedorPartial",
+        "type": "object",
+        "description": "(tsType: Partial<Fornecedor>, schemaOptions: { partial: true })",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "nomefornecedor": {
+            "type": "string"
+          },
+          "stock": {
+            "type": "number"
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "Partial<Fornecedor>"
+      },
+      "NewCarroInListadepreferencia": {
+        "title": "NewCarroInListadepreferencia",
+        "type": "object",
+        "description": "(tsType: Omit<Carro, 'id'>, schemaOptions: { title: 'NewCarroInListadepreferencia', exclude: [ 'id' ] })",
+        "properties": {
+          "categoria": {
+            "type": "string"
+          },
+          "nome_marca": {
+            "type": "string"
+          },
+          "modelo": {
+            "type": "string"
+          },
+          "preco": {
+            "type": "number"
+          },
+          "potencia": {
+            "type": "number"
+          },
+          "cor": {
+            "type": "string"
+          },
+          "ano": {
+            "type": "number"
+          },
+          "marcaId": {
+            "type": "number"
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "Omit<Carro, 'id'>"
+      },
+      "NewListadepreferencia": {
+        "title": "NewListadepreferencia",
+        "type": "object",
+        "description": "(tsType: Omit<Listadepreferencia, 'id'>, schemaOptions: { title: 'NewListadepreferencia', exclude: [ 'id' ] })",
+        "properties": {
+          "categoria": {
+            "type": "string"
+          },
+          "modelo": {
+            "type": "string"
+          },
+          "clienteId": {
+            "type": "number"
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "Omit<Listadepreferencia, 'id'>"
+      },
+      "NewCarroInMarca": {
+        "title": "NewCarroInMarca",
+        "type": "object",
+        "description": "(tsType: @loopback/repository-json-schema#Optional<Omit<Carro, 'id'>, 'marcaId'>, schemaOptions: { title: 'NewCarroInMarca', exclude: [ 'id' ], optional: [ 'marcaId' ] })",
+        "properties": {
+          "categoria": {
+            "type": "string"
+          },
+          "nome_marca": {
+            "type": "string"
+          },
+          "modelo": {
+            "type": "string"
+          },
+          "preco": {
+            "type": "number"
+          },
+          "potencia": {
+            "type": "number"
+          },
+          "cor": {
+            "type": "string"
+          },
+          "ano": {
+            "type": "number"
+          },
+          "marcaId": {
+            "type": "number"
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "@loopback/repository-json-schema#Optional<Omit<Carro, 'id'>, 'marcaId'>"
+      },
+      "NewFornecedorInMarca": {
+        "title": "NewFornecedorInMarca",
+        "type": "object",
+        "description": "(tsType: Omit<Fornecedor, 'id'>, schemaOptions: { title: 'NewFornecedorInMarca', exclude: [ 'id' ] })",
+        "properties": {
+          "nomefornecedor": {
+            "type": "string"
+          },
+          "stock": {
+            "type": "number"
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "Omit<Fornecedor, 'id'>"
+      },
+      "NewMarca": {
+        "title": "NewMarca",
+        "type": "object",
+        "description": "(tsType: Omit<Marca, 'id'>, schemaOptions: { title: 'NewMarca', exclude: [ 'id' ] })",
+        "properties": {
+          "marca": {
+            "type": "string"
+          },
+          "quantidade": {
+            "type": "number"
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "Omit<Marca, 'id'>"
+      },
+      "MarcaPartial": {
+        "title": "MarcaPartial",
+        "type": "object",
+        "description": "(tsType: Partial<Marca>, schemaOptions: { partial: true })",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "marca": {
+            "type": "string"
+          },
+          "quantidade": {
+            "type": "number"
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "Partial<Marca>"
+      },
+      "loopback.Count": {
+        "type": "object",
+        "title": "loopback.Count",
+        "x-typescript-type": "@loopback/repository#Count",
+        "properties": {
+          "count": {
+            "type": "number"
+          }
+        }
+      },
+      "Carro.ScopeFilter": {
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "where": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {},
+                "additionalProperties": true
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "uniqueItems": true
+              }
+            ]
+          },
+          "include": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {},
+              "additionalProperties": true
+            }
+          }
+        },
+        "additionalProperties": false,
+        "title": "Carro.ScopeFilter"
+      },
+      "Carro.IncludeFilter.Items": {
+        "title": "Carro.IncludeFilter.Items",
+        "type": "object",
+        "properties": {
+          "relation": {
+            "type": "string"
+          },
+          "scope": {
+            "$ref": "#/components/schemas/Carro.ScopeFilter"
+          }
+        }
+      },
+      "Carro.Filter": {
+        "type": "object",
+        "title": "Carro.Filter",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "boolean"
+                  },
+                  "categoria": {
+                    "type": "boolean"
+                  },
+                  "nome_marca": {
+                    "type": "boolean"
+                  },
+                  "modelo": {
+                    "type": "boolean"
+                  },
+                  "preco": {
+                    "type": "boolean"
+                  },
+                  "potencia": {
+                    "type": "boolean"
+                  },
+                  "cor": {
+                    "type": "boolean"
+                  },
+                  "ano": {
+                    "type": "boolean"
+                  },
+                  "marcaId": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "id",
+                    "categoria",
+                    "nome_marca",
+                    "modelo",
+                    "preco",
+                    "potencia",
+                    "cor",
+                    "ano",
+                    "marcaId"
+                  ],
+                  "example": "id"
+                },
+                "uniqueItems": true
+              }
+            ],
+            "title": "Carro.Fields"
+          },
+          "include": {
+            "title": "Carro.IncludeFilter",
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/Carro.IncludeFilter.Items"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "@loopback/repository#Filter<Carro>"
+      },
+      "Carro.Filter1": {
+        "type": "object",
+        "title": "Carro.Filter",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "where": {
+            "title": "Carro.WhereFilter",
+            "type": "object",
+            "additionalProperties": true
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "boolean"
+                  },
+                  "categoria": {
+                    "type": "boolean"
+                  },
+                  "nome_marca": {
+                    "type": "boolean"
+                  },
+                  "modelo": {
+                    "type": "boolean"
+                  },
+                  "preco": {
+                    "type": "boolean"
+                  },
+                  "potencia": {
+                    "type": "boolean"
+                  },
+                  "cor": {
+                    "type": "boolean"
+                  },
+                  "ano": {
+                    "type": "boolean"
+                  },
+                  "marcaId": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "id",
+                    "categoria",
+                    "nome_marca",
+                    "modelo",
+                    "preco",
+                    "potencia",
+                    "cor",
+                    "ano",
+                    "marcaId"
+                  ],
+                  "example": "id"
+                },
+                "uniqueItems": true
+              }
+            ],
+            "title": "Carro.Fields"
+          },
+          "include": {
+            "title": "Carro.IncludeFilter",
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/Carro.IncludeFilter.Items"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "@loopback/repository#Filter<Carro>"
+      },
+      "Cliente.ScopeFilter": {
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "where": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {},
+                "additionalProperties": true
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "uniqueItems": true
+              }
+            ]
+          },
+          "include": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {},
+              "additionalProperties": true
+            }
+          }
+        },
+        "additionalProperties": false,
+        "title": "Cliente.ScopeFilter"
+      },
+      "Cliente.IncludeFilter.Items": {
+        "title": "Cliente.IncludeFilter.Items",
+        "type": "object",
+        "properties": {
+          "relation": {
+            "type": "string"
+          },
+          "scope": {
+            "$ref": "#/components/schemas/Cliente.ScopeFilter"
+          }
+        }
+      },
+      "Cliente.Filter": {
+        "type": "object",
+        "title": "Cliente.Filter",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "boolean"
+                  },
+                  "nome": {
+                    "type": "boolean"
+                  },
+                  "contacto": {
+                    "type": "boolean"
+                  },
+                  "nif": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "id",
+                    "nome",
+                    "contacto",
+                    "nif"
+                  ],
+                  "example": "id"
+                },
+                "uniqueItems": true
+              }
+            ],
+            "title": "Cliente.Fields"
+          },
+          "include": {
+            "title": "Cliente.IncludeFilter",
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/Cliente.IncludeFilter.Items"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "@loopback/repository#Filter<Cliente>"
+      },
+      "Cliente.Filter1": {
+        "type": "object",
+        "title": "Cliente.Filter",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "where": {
+            "title": "Cliente.WhereFilter",
+            "type": "object",
+            "additionalProperties": true
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "boolean"
+                  },
+                  "nome": {
+                    "type": "boolean"
+                  },
+                  "contacto": {
+                    "type": "boolean"
+                  },
+                  "nif": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "id",
+                    "nome",
+                    "contacto",
+                    "nif"
+                  ],
+                  "example": "id"
+                },
+                "uniqueItems": true
+              }
+            ],
+            "title": "Cliente.Fields"
+          },
+          "include": {
+            "title": "Cliente.IncludeFilter",
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/Cliente.IncludeFilter.Items"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "@loopback/repository#Filter<Cliente>"
+      },
+      "Fornecedor.Filter": {
+        "type": "object",
+        "title": "Fornecedor.Filter",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "boolean"
+                  },
+                  "nomefornecedor": {
+                    "type": "boolean"
+                  },
+                  "stock": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "id",
+                    "nomefornecedor",
+                    "stock"
+                  ],
+                  "example": "id"
+                },
+                "uniqueItems": true
+              }
+            ],
+            "title": "Fornecedor.Fields"
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "@loopback/repository#Filter<Fornecedor>"
+      },
+      "Fornecedor.Filter1": {
+        "type": "object",
+        "title": "Fornecedor.Filter",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "where": {
+            "title": "Fornecedor.WhereFilter",
+            "type": "object",
+            "additionalProperties": true
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "boolean"
+                  },
+                  "nomefornecedor": {
+                    "type": "boolean"
+                  },
+                  "stock": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "id",
+                    "nomefornecedor",
+                    "stock"
+                  ],
+                  "example": "id"
+                },
+                "uniqueItems": true
+              }
+            ],
+            "title": "Fornecedor.Fields"
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "@loopback/repository#Filter<Fornecedor>"
+      },
+      "Listadepreferencia.ScopeFilter": {
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "where": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {},
+                "additionalProperties": true
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "uniqueItems": true
+              }
+            ]
+          },
+          "include": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {},
+              "additionalProperties": true
+            }
+          }
+        },
+        "additionalProperties": false,
+        "title": "Listadepreferencia.ScopeFilter"
+      },
+      "Listadepreferencia.IncludeFilter.Items": {
+        "title": "Listadepreferencia.IncludeFilter.Items",
+        "type": "object",
+        "properties": {
+          "relation": {
+            "type": "string"
+          },
+          "scope": {
+            "$ref": "#/components/schemas/Listadepreferencia.ScopeFilter"
+          }
+        }
+      },
+      "Listadepreferencia.Filter": {
+        "type": "object",
+        "title": "Listadepreferencia.Filter",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "boolean"
+                  },
+                  "categoria": {
+                    "type": "boolean"
+                  },
+                  "modelo": {
+                    "type": "boolean"
+                  },
+                  "clienteId": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "id",
+                    "categoria",
+                    "modelo",
+                    "clienteId"
+                  ],
+                  "example": "id"
+                },
+                "uniqueItems": true
+              }
+            ],
+            "title": "Listadepreferencia.Fields"
+          },
+          "include": {
+            "title": "Listadepreferencia.IncludeFilter",
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/Listadepreferencia.IncludeFilter.Items"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "@loopback/repository#Filter<Listadepreferencia>"
+      },
+      "Listadepreferencia.Filter1": {
+        "type": "object",
+        "title": "Listadepreferencia.Filter",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "where": {
+            "title": "Listadepreferencia.WhereFilter",
+            "type": "object",
+            "additionalProperties": true
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "boolean"
+                  },
+                  "categoria": {
+                    "type": "boolean"
+                  },
+                  "modelo": {
+                    "type": "boolean"
+                  },
+                  "clienteId": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "id",
+                    "categoria",
+                    "modelo",
+                    "clienteId"
+                  ],
+                  "example": "id"
+                },
+                "uniqueItems": true
+              }
+            ],
+            "title": "Listadepreferencia.Fields"
+          },
+          "include": {
+            "title": "Listadepreferencia.IncludeFilter",
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/Listadepreferencia.IncludeFilter.Items"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "@loopback/repository#Filter<Listadepreferencia>"
+      },
+      "Marca.ScopeFilter": {
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "where": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {},
+                "additionalProperties": true
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "uniqueItems": true
+              }
+            ]
+          },
+          "include": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {},
+              "additionalProperties": true
+            }
+          }
+        },
+        "additionalProperties": false,
+        "title": "Marca.ScopeFilter"
+      },
+      "Marca.IncludeFilter.Items": {
+        "title": "Marca.IncludeFilter.Items",
+        "type": "object",
+        "properties": {
+          "relation": {
+            "type": "string"
+          },
+          "scope": {
+            "$ref": "#/components/schemas/Marca.ScopeFilter"
+          }
+        }
+      },
+      "Marca.Filter": {
+        "type": "object",
+        "title": "Marca.Filter",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "boolean"
+                  },
+                  "marca": {
+                    "type": "boolean"
+                  },
+                  "quantidade": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "id",
+                    "marca",
+                    "quantidade"
+                  ],
+                  "example": "id"
+                },
+                "uniqueItems": true
+              }
+            ],
+            "title": "Marca.Fields"
+          },
+          "include": {
+            "title": "Marca.IncludeFilter",
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/Marca.IncludeFilter.Items"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "@loopback/repository#Filter<Marca>"
+      },
+      "Marca.Filter1": {
+        "type": "object",
+        "title": "Marca.Filter",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "where": {
+            "title": "Marca.WhereFilter",
+            "type": "object",
+            "additionalProperties": true
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "boolean"
+                  },
+                  "marca": {
+                    "type": "boolean"
+                  },
+                  "quantidade": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "id",
+                    "marca",
+                    "quantidade"
+                  ],
+                  "example": "id"
+                },
+                "uniqueItems": true
+              }
+            ],
+            "title": "Marca.Fields"
+          },
+          "include": {
+            "title": "Marca.IncludeFilter",
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/Marca.IncludeFilter.Items"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "@loopback/repository#Filter<Marca>"
+      },
+      "PingResponse": {
+        "type": "object",
+        "title": "PingResponse",
+        "properties": {
+          "greeting": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "headers": {
+            "type": "object",
+            "properties": {
+              "Content-Type": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": true
+          }
+        }
+      }
+    }
+  }
+}
