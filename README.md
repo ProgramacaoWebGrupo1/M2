@@ -48,7 +48,8 @@ An example report using markdown on Github. This documentation is writen using [
 
 _Please help reader navigate around describing how the repository is organized by providing links_
 * **Source code** is in the [src folder](https://github.com/exemploTrabalho/report/src).
-* * **Base de Dados** encontra-se no [src folder](https://github.com/ProgramacaoWebGrupo1/M2/tree/main/src/MySQL).
+* **Base de Dados** encontra-se no [src MySQL](https://github.com/ProgramacaoWebGrupo1/M2/tree/main/src/MySQL).
+* **Postman Collection** encontra-se no [src Postman-Collection](https://github.com/ProgramacaoWebGrupo1/M2/tree/main/src/Postman-Collection).
 * Report chapters are in [doc folder](https://github.com/exemploTrabalho/report/doc).
 
 ## Gallery
