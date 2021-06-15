@@ -1,0 +1,927 @@
+Error: Parse Error. Style sheets should not include HTML syntax.
+
+From line 1, column 1; to line 1, column 16
+
+<html lang="en"><head>
+
+Error: Parse Error. Style sheets should not include HTML syntax.
+
+From line 1, column 17; to line 1, column 22
+
+<html lang="en"><head>↩    <
+
+Error: Parse Error.
+
+From line 8, column 84; to line 9, column 6
+
+family=Mate+SC&display=swap');↩      </styl
+
+Error: Attribute async not allowed on element link at this point.
+
+From line 33, column 5; to line 33, column 122
+
+n build`.↩↩      ↩    -->↩    <link async="" rel="stylesheet" href="//cdn.jsdelivr.net/npm/semantic-ui@${props.versions.sui}/dist/semantic.min.css">↩<scri
+
+Attributes for element link:
+Global attributes
+href — Address of the hyperlink
+crossorigin — How the element handles crossorigin requests
+rel — Relationship between the document containing the hyperlink and the destination resource
+media — Applicable media
+integrity — Integrity metadata used in Subresource Integrity checks [SRI]
+hreflang — Language of the linked resource
+type — Hint for the type of the referenced resource
+referrerpolicy — Referrer policy for fetches initiated by the element
+sizes — Sizes of the icons (for rel="icon")
+imagesrcset — Images to use in different situations, e.g., high-resolution displays, small monitors, etc. (for rel="preload")
+imagesizes — Image sizes for different page layouts (for rel="preload")
+as — Potential destination for a preload request (for rel="preload" and rel="modulepreload")
+color — Color to use when customizing a site's icon (for rel="mask-icon")
+disabled — Whether the link is disabled
+Also, the title attribute has special semantics on this element: Title of the link; CSS style sheet set name.
+Error: Bad value //cdn.jsdelivr.net/npm/semantic-ui@${props.versions.sui}/dist/semantic.min.css for attribute href on element link: Illegal character in path segment: { is not allowed.
+
+From line 33, column 5; to line 33, column 122
+
+n build`.↩↩      ↩    -->↩    <link async="" rel="stylesheet" href="//cdn.jsdelivr.net/npm/semantic-ui@${props.versions.sui}/dist/semantic.min.css">↩<scri
+
+Error: Bad value //cdn.jsdelivr.net/npm/semantic-ui@${props.versions.sui}/dist/semantic.min.js for attribute src on element script: Illegal character in path segment: { is not allowed.
+
+From line 34, column 1; to line 34, column 101
+
+.sui}/dist/semantic.min.css">↩<script async="" src="//cdn.jsdelivr.net/npm/semantic-ui@${props.versions.sui}/dist/semantic.min.js"></scri
+
+Error: Element title not allowed as child of element head in this context. (Suppressing further errors from this subtree.)
+
+From line 48, column 5; to line 48, column 11
+
+rossorigin="anonymous">↩↩↩    <title>React 
+
+Contexts in which element title may be used:
+In a head element containing no other title elements.
+Content model for element head:
+If the document is an iframe srcdoc document or if title information is available from a higher-level protocol: Zero or more elements of metadata content, of which no more than one is a title element and no more than one is a base element.
+Otherwise: One or more elements of metadata content, of which exactly one is a title element and no more than one is a base element.
+Warning: Empty heading.
+
+From line 2467, column 1049; to line 2467, column 1164
+
+></path></svg></span></button><h6 class="MuiTypography-root RaAppBar-title-16 MuiTypography-h6 MuiTypography-colorInherit" id="react-admin-title"></h6><
+
+Error: An element with role=menuitem must be contained in, or owned by, an element with role=menubar or role=menu.
+
+From line 2467, column 2740; to line 2467, column 2991
+
+aMenu-main-37 RaMenu-open-38"><a class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root RaMenuItemLink-root-40 MuiMenuItem-gu…temLink-active-41" tabindex="0" role="menuitem" aria-disabled="false" href="#/" aria-current="page"><div c
+
+Error: An element with role=menuitem must be contained in, or owned by, an element with role=menubar or role=menu.
+
+From line 2467, column 3255; to line 2467, column 3467
+
+itle></svg></div>Dashboard</a><a class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root RaMenuItemLink-root-40 MuiMenuItem-gu…Item-gutters MuiListItem-button" tabindex="0" role="menuitem" aria-disabled="false" href="#/carros"><div c
+
+Error: An element with role=menuitem must be contained in, or owned by, an element with role=menubar or role=menu.
+
+From line 2467, column 4003; to line 2467, column 4217
+
+</title></svg></div>Carros</a><a class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root RaMenuItemLink-root-40 MuiMenuItem-gu…em-gutters MuiListItem-button" tabindex="0" role="menuitem" aria-disabled="false" href="#/clientes"><div c
+
+Error: An element with role=menuitem must be contained in, or owned by, an element with role=menubar or role=menu.
+
+From line 2467, column 4527; to line 2467, column 4744
+
+title></svg></div>Clientes</a><a class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root RaMenuItemLink-root-40 MuiMenuItem-gu…gutters MuiListItem-button" tabindex="0" role="menuitem" aria-disabled="false" href="#/fornecedors"><div c
+
+Error: An element with role=menuitem must be contained in, or owned by, an element with role=menubar or role=menu.
+
+From line 2467, column 5239; to line 2467, column 5451
+
+le></svg></div>Fornecedors</a><a class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root RaMenuItemLink-root-40 MuiMenuItem-gu…Item-gutters MuiListItem-button" tabindex="0" role="menuitem" aria-disabled="false" href="#/marcas"><div c
+
+Error: An element with role=menuitem must be contained in, or owned by, an element with role=menubar or role=menu.
+
+From line 2467, column 6107; to line 2467, column 6332
+
+</title></svg></div>Marcas</a><a class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root RaMenuItemLink-root-40 MuiMenuItem-gu…MuiListItem-button" tabindex="0" role="menuitem" aria-disabled="false" href="#/listadepreferencias"><div c
+
+Error: An element with role=menuitem must be contained in, or owned by, an element with role=menubar or role=menu.
+
+From line 2467, column 6641; to line 2467, column 6856
+
+></div>Listadepreferencias</a><a class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root RaMenuItemLink-root-40 MuiMenuItem-gu…m-gutters MuiListItem-button" tabindex="0" role="menuitem" aria-disabled="false" href="#/favoritos"><div c
+
+Error: An element with role=menuitem must be contained in, or owned by, an element with role=menubar or role=menu.
+
+From line 2467, column 7233; to line 2467, column 7445
+
+itle></svg></div>Favoritos</a><a class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root RaMenuItemLink-root-40 MuiMenuItem-gu…Item-gutters MuiListItem-button" tabindex="0" role="menuitem" aria-disabled="false" href="#/listas"><div c
+
+Error: Attribute xmlns:ct not allowed here.
+
+From line 2467, column 10277; to line 2467, column 10420
+
+Hours"><div class="ct-chart "><svg xmlns:ct="http://gionkunz.github.com/chartist-js/ct" width="100%" height="245px" class="ct-chart-line" style="width: 100%; height: 245px;"><g cla
+
+Warning: Attribute with the local name xmlns:ct is not serializable as XML 1.0.
+
+From line 2467, column 10277; to line 2467, column 10420
+
+Hours"><div class="ct-chart "><svg xmlns:ct="http://gionkunz.github.com/chartist-js/ct" width="100%" height="245px" class="ct-chart-line" style="width: 100%; height: 245px;"><g cla
+
+Warning: Attribute ct:value is not serializable as XML 1.0.
+
+From line 2467, column 11636; to line 2467, column 11716
+
+7.813" class="ct-line"></path><line x1="50" y1="161.25" x2="50.01" y2="161.25" class="ct-point" ct:value="200"></line
+
+Error: Attribute ct:value not allowed on element line at this point.
+
+From line 2467, column 11636; to line 2467, column 11716
+
+7.813" class="ct-line"></path><line x1="50" y1="161.25" x2="50.01" y2="161.25" class="ct-point" ct:value="200"></line
+
+Warning: Attribute ct:value is not serializable as XML 1.0.
+
+From line 2467, column 11724; to line 2467, column 11839
+
+-point" ct:value="200"></line><line x1="126.26116071428571" y1="116.15625" x2="126.27116071428571" y2="116.15625" class="ct-point" ct:value="385"></line
+
+Error: Attribute ct:value not allowed on element line at this point.
+
+From line 2467, column 11724; to line 2467, column 11839
+
+-point" ct:value="200"></line><line x1="126.26116071428571" y1="116.15625" x2="126.27116071428571" y2="116.15625" class="ct-point" ct:value="385"></line
+
+Warning: Attribute ct:value is not serializable as XML 1.0.
+
+From line 2467, column 11847; to line 2467, column 11957
+
+-point" ct:value="385"></line><line x1="202.52232142857142" y1="90.5625" x2="202.5323214285714" y2="90.5625" class="ct-point" ct:value="490"></line
+
+Error: Attribute ct:value not allowed on element line at this point.
+
+From line 2467, column 11847; to line 2467, column 11957
+
+-point" ct:value="385"></line><line x1="202.52232142857142" y1="90.5625" x2="202.5323214285714" y2="90.5625" class="ct-point" ct:value="490"></line
+
+Warning: Attribute ct:value is not serializable as XML 1.0.
+
+From line 2467, column 11965; to line 2467, column 12070
+
+-point" ct:value="490"></line><line x1="278.7834821428571" y1="63.75" x2="278.7934821428571" y2="63.75" class="ct-point" ct:value="600"></line
+
+Error: Attribute ct:value not allowed on element line at this point.
+
+From line 2467, column 11965; to line 2467, column 12070
+
+-point" ct:value="490"></line><line x1="278.7834821428571" y1="63.75" x2="278.7934821428571" y2="63.75" class="ct-point" ct:value="600"></line
+
+Warning: Attribute ct:value is not serializable as XML 1.0.
+
+From line 2467, column 12078; to line 2467, column 12188
+
+-point" ct:value="600"></line><line x1="355.04464285714283" y1="136.875" x2="355.0546428571428" y2="136.875" class="ct-point" ct:value="300"></line
+
+Error: Attribute ct:value not allowed on element line at this point.
+
+From line 2467, column 12078; to line 2467, column 12188
+
+-point" ct:value="600"></line><line x1="355.04464285714283" y1="136.875" x2="355.0546428571428" y2="136.875" class="ct-point" ct:value="300"></line
+
+Warning: Attribute ct:value is not serializable as XML 1.0.
+
+From line 2467, column 12196; to line 2467, column 12309
+
+-point" ct:value="300"></line><line x1="431.30580357142856" y1="158.8125" x2="431.31580357142855" y2="158.8125" class="ct-point" ct:value="210"></line
+
+Error: Attribute ct:value not allowed on element line at this point.
+
+From line 2467, column 12196; to line 2467, column 12309
+
+-point" ct:value="300"></line><line x1="431.30580357142856" y1="158.8125" x2="431.31580357142855" y2="158.8125" class="ct-point" ct:value="210"></line
+
+Warning: Attribute ct:value is not serializable as XML 1.0.
+
+From line 2467, column 12317; to line 2467, column 12426
+
+-point" ct:value="210"></line><line x1="507.5669642857142" y1="177.825" x2="507.5769642857142" y2="177.825" class="ct-point" ct:value="132"></line
+
+Error: Attribute ct:value not allowed on element line at this point.
+
+From line 2467, column 12317; to line 2467, column 12426
+
+-point" ct:value="210"></line><line x1="507.5669642857142" y1="177.825" x2="507.5769642857142" y2="177.825" class="ct-point" ct:value="132"></line
+
+Warning: Attribute ct:value is not serializable as XML 1.0.
+
+From line 2467, column 12434; to line 2467, column 12530
+
+-point" ct:value="132"></line><line x1="583.828125" y1="197.8125" x2="583.838125" y2="197.8125" class="ct-point" ct:value="50"></line
+
+Error: Attribute ct:value not allowed on element line at this point.
+
+From line 2467, column 12434; to line 2467, column 12530
+
+-point" ct:value="132"></line><line x1="583.828125" y1="197.8125" x2="583.838125" y2="197.8125" class="ct-point" ct:value="50"></line
+
+Error: Bad value http://www.w3.org/2000/xmlns/ for the attribute xmlns (only http://www.w3.org/1999/xhtml permitted here).
+
+From line 2467, column 12662; to line 2467, column 12778
+
+6.26116071428571" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 76px; height: 20px;">9:00</
+
+Warning: Attribute xmlns is not serializable as XML 1.0.
+
+From line 2467, column 12662; to line 2467, column 12778
+
+6.26116071428571" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 76px; height: 20px;">9:00</
+
+Error: Bad value http://www.w3.org/2000/xmlns/ for the attribute xmlns (only http://www.w3.org/1999/xhtml permitted here).
+
+From line 2467, column 12917; to line 2467, column 13033
+
+6.26116071428571" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 76px; height: 20px;">12:00<
+
+Warning: Attribute xmlns is not serializable as XML 1.0.
+
+From line 2467, column 12917; to line 2467, column 13033
+
+6.26116071428571" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 76px; height: 20px;">12:00<
+
+Error: Bad value http://www.w3.org/2000/xmlns/ for the attribute xmlns (only http://www.w3.org/1999/xhtml permitted here).
+
+From line 2467, column 13172; to line 2467, column 13288
+
+76.2611607142857" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 76px; height: 20px;">15:00<
+
+Warning: Attribute xmlns is not serializable as XML 1.0.
+
+From line 2467, column 13172; to line 2467, column 13288
+
+76.2611607142857" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 76px; height: 20px;">15:00<
+
+Error: Bad value http://www.w3.org/2000/xmlns/ for the attribute xmlns (only http://www.w3.org/1999/xhtml permitted here).
+
+From line 2467, column 13427; to line 2467, column 13543
+
+6.26116071428572" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 76px; height: 20px;">18:00<
+
+Warning: Attribute xmlns is not serializable as XML 1.0.
+
+From line 2467, column 13427; to line 2467, column 13543
+
+6.26116071428572" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 76px; height: 20px;">18:00<
+
+Error: Bad value http://www.w3.org/2000/xmlns/ for the attribute xmlns (only http://www.w3.org/1999/xhtml permitted here).
+
+From line 2467, column 13683; to line 2467, column 13799
+
+6.26116071428572" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 76px; height: 20px;">21:00<
+
+Warning: Attribute xmlns is not serializable as XML 1.0.
+
+From line 2467, column 13683; to line 2467, column 13799
+
+6.26116071428572" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 76px; height: 20px;">21:00<
+
+Error: Bad value http://www.w3.org/2000/xmlns/ for the attribute xmlns (only http://www.w3.org/1999/xhtml permitted here).
+
+From line 2467, column 13939; to line 2467, column 14055
+
+6.26116071428567" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 76px; height: 20px;">00:00<
+
+Warning: Attribute xmlns is not serializable as XML 1.0.
+
+From line 2467, column 13939; to line 2467, column 14055
+
+6.26116071428567" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 76px; height: 20px;">00:00<
+
+Error: Bad value http://www.w3.org/2000/xmlns/ for the attribute xmlns (only http://www.w3.org/1999/xhtml permitted here).
+
+From line 2467, column 14194; to line 2467, column 14310
+
+6.26116071428578" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 76px; height: 20px;">3:00</
+
+Warning: Attribute xmlns is not serializable as XML 1.0.
+
+From line 2467, column 14194; to line 2467, column 14310
+
+6.26116071428578" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 76px; height: 20px;">3:00</
+
+Error: Bad value http://www.w3.org/2000/xmlns/ for the attribute xmlns (only http://www.w3.org/1999/xhtml permitted here).
+
+From line 2467, column 14426; to line 2467, column 14542
+
+="215" width="30" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 30px; height: 20px;">6:00</
+
+Warning: Attribute xmlns is not serializable as XML 1.0.
+
+From line 2467, column 14426; to line 2467, column 14542
+
+="215" width="30" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 30px; height: 20px;">6:00</
+
+Error: Bad value http://www.w3.org/2000/xmlns/ for the attribute xmlns (only http://www.w3.org/1999/xhtml permitted here).
+
+From line 2467, column 14658; to line 2467, column 14774
+
+0" height="24.375" width="30"><span class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/" style="height: 24px; width: 30px;">0</spa
+
+Warning: Attribute xmlns is not serializable as XML 1.0.
+
+From line 2467, column 14658; to line 2467, column 14774
+
+0" height="24.375" width="30"><span class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/" style="height: 24px; width: 30px;">0</spa
+
+Error: Bad value http://www.w3.org/2000/xmlns/ for the attribute xmlns (only http://www.w3.org/1999/xhtml permitted here).
+
+From line 2467, column 14886; to line 2467, column 15002
+
+0" height="24.375" width="30"><span class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/" style="height: 24px; width: 30px;">100</s
+
+Warning: Attribute xmlns is not serializable as XML 1.0.
+
+From line 2467, column 14886; to line 2467, column 15002
+
+0" height="24.375" width="30"><span class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/" style="height: 24px; width: 30px;">100</s
+
+Error: Bad value http://www.w3.org/2000/xmlns/ for the attribute xmlns (only http://www.w3.org/1999/xhtml permitted here).
+
+From line 2467, column 15117; to line 2467, column 15233
+
+0" height="24.375" width="30"><span class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/" style="height: 24px; width: 30px;">200</s
+
+Warning: Attribute xmlns is not serializable as XML 1.0.
+
+From line 2467, column 15117; to line 2467, column 15233
+
+0" height="24.375" width="30"><span class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/" style="height: 24px; width: 30px;">200</s
+
+Error: Bad value http://www.w3.org/2000/xmlns/ for the attribute xmlns (only http://www.w3.org/1999/xhtml permitted here).
+
+From line 2467, column 15346; to line 2467, column 15462
+
+0" height="24.375" width="30"><span class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/" style="height: 24px; width: 30px;">300</s
+
+Warning: Attribute xmlns is not serializable as XML 1.0.
+
+From line 2467, column 15346; to line 2467, column 15462
+
+0" height="24.375" width="30"><span class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/" style="height: 24px; width: 30px;">300</s
+
+Error: Bad value http://www.w3.org/2000/xmlns/ for the attribute xmlns (only http://www.w3.org/1999/xhtml permitted here).
+
+From line 2467, column 15576; to line 2467, column 15692
+
+0" height="24.375" width="30"><span class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/" style="height: 24px; width: 30px;">400</s
+
+Warning: Attribute xmlns is not serializable as XML 1.0.
+
+From line 2467, column 15576; to line 2467, column 15692
+
+0" height="24.375" width="30"><span class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/" style="height: 24px; width: 30px;">400</s
+
+Error: Bad value http://www.w3.org/2000/xmlns/ for the attribute xmlns (only http://www.w3.org/1999/xhtml permitted here).
+
+From line 2467, column 15805; to line 2467, column 15921
+
+0" height="24.375" width="30"><span class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/" style="height: 24px; width: 30px;">500</s
+
+Warning: Attribute xmlns is not serializable as XML 1.0.
+
+From line 2467, column 15805; to line 2467, column 15921
+
+0" height="24.375" width="30"><span class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/" style="height: 24px; width: 30px;">500</s
+
+Error: Bad value http://www.w3.org/2000/xmlns/ for the attribute xmlns (only http://www.w3.org/1999/xhtml permitted here).
+
+From line 2467, column 16035; to line 2467, column 16151
+
+0" height="24.375" width="30"><span class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/" style="height: 24px; width: 30px;">600</s
+
+Warning: Attribute xmlns is not serializable as XML 1.0.
+
+From line 2467, column 16035; to line 2467, column 16151
+
+0" height="24.375" width="30"><span class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/" style="height: 24px; width: 30px;">600</s
+
+Error: Bad value http://www.w3.org/2000/xmlns/ for the attribute xmlns (only http://www.w3.org/1999/xhtml permitted here).
+
+From line 2467, column 16261; to line 2467, column 16377
+
+0" height="24.375" width="30"><span class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/" style="height: 24px; width: 30px;">700</s
+
+Warning: Attribute xmlns is not serializable as XML 1.0.
+
+From line 2467, column 16261; to line 2467, column 16377
+
+0" height="24.375" width="30"><span class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/" style="height: 24px; width: 30px;">700</s
+
+Error: Bad value http://www.w3.org/2000/xmlns/ for the attribute xmlns (only http://www.w3.org/1999/xhtml permitted here).
+
+From line 2467, column 16484; to line 2467, column 16600
+
+x="10" height="30" width="30"><span class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/" style="height: 30px; width: 30px;">800</s
+
+Warning: Attribute xmlns is not serializable as XML 1.0.
+
+From line 2467, column 16484; to line 2467, column 16600
+
+x="10" height="30" width="30"><span class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/" style="height: 30px; width: 30px;">800</s
+
+Error: Attribute xmlns:ct not allowed here.
+
+From line 2467, column 17108; to line 2467, column 17250
+
+ivity"><div class="ct-chart "><svg xmlns:ct="http://gionkunz.github.com/chartist-js/ct" width="100%" height="245px" class="ct-chart-bar" style="width: 100%; height: 245px;"><g cla
+
+Warning: Attribute with the local name xmlns:ct is not serializable as XML 1.0.
+
+From line 2467, column 17108; to line 2467, column 17250
+
+ivity"><div class="ct-chart "><svg xmlns:ct="http://gionkunz.github.com/chartist-js/ct" width="100%" height="245px" class="ct-chart-bar" style="width: 100%; height: 245px;"><g cla
+
+Warning: Attribute ct:value is not serializable as XML 1.0.
+
+From line 2467, column 17898; to line 2467, column 17988
+
+class="ct-series ct-series-a"><line x1="67.77587890625" x2="67.77587890625" y1="210" y2="80" class="ct-bar" ct:value="4">
+
+Error: Attribute ct:value not allowed on element line at this point.
+
+From line 2467, column 17898; to line 2467, column 17988
+
+class="ct-series ct-series-a"><line x1="67.77587890625" x2="67.77587890625" y1="210" y2="80" class="ct-bar" ct:value="4">
+
+Warning: Attribute ct:value is not serializable as XML 1.0.
+
+From line 2467, column 17996; to line 2467, column 18088
+
+="ct-bar" ct:value="4"></line><line x1="103.32763671875" x2="103.32763671875" y1="210" y2="15" class="ct-bar" ct:value="6"></line
+
+Error: Attribute ct:value not allowed on element line at this point.
+
+From line 2467, column 17996; to line 2467, column 18088
+
+="ct-bar" ct:value="4"></line><line x1="103.32763671875" x2="103.32763671875" y1="210" y2="15" class="ct-bar" ct:value="6"></line
+
+Warning: Attribute ct:value is not serializable as XML 1.0.
+
+From line 2467, column 18096; to line 2467, column 18191
+
+="ct-bar" ct:value="6"></line><line x1="138.87939453125" x2="138.87939453125" y1="210" y2="112.5" class="ct-bar" ct:value="3"></line
+
+Error: Attribute ct:value not allowed on element line at this point.
+
+From line 2467, column 18096; to line 2467, column 18191
+
+="ct-bar" ct:value="6"></line><line x1="138.87939453125" x2="138.87939453125" y1="210" y2="112.5" class="ct-bar" ct:value="3"></line
+
+Warning: Attribute ct:value is not serializable as XML 1.0.
+
+From line 2467, column 18199; to line 2467, column 18294
+
+="ct-bar" ct:value="3"></line><line x1="174.43115234375" x2="174.43115234375" y1="210" y2="177.5" class="ct-bar" ct:value="1"></line
+
+Error: Attribute ct:value not allowed on element line at this point.
+
+From line 2467, column 18199; to line 2467, column 18294
+
+="ct-bar" ct:value="3"></line><line x1="174.43115234375" x2="174.43115234375" y1="210" y2="177.5" class="ct-bar" ct:value="1"></line
+
+Warning: Attribute ct:value is not serializable as XML 1.0.
+
+From line 2467, column 18302; to line 2467, column 18397
+
+="ct-bar" ct:value="1"></line><line x1="209.98291015625" x2="209.98291015625" y1="210" y2="177.5" class="ct-bar" ct:value="1"></line
+
+Error: Attribute ct:value not allowed on element line at this point.
+
+From line 2467, column 18302; to line 2467, column 18397
+
+="ct-bar" ct:value="1"></line><line x1="209.98291015625" x2="209.98291015625" y1="210" y2="177.5" class="ct-bar" ct:value="1"></line
+
+Warning: Attribute ct:value is not serializable as XML 1.0.
+
+From line 2467, column 18405; to line 2467, column 18498
+
+="ct-bar" ct:value="1"></line><line x1="245.53466796875" x2="245.53466796875" y1="210" y2="145" class="ct-bar" ct:value="2"></line
+
+Error: Attribute ct:value not allowed on element line at this point.
+
+From line 2467, column 18405; to line 2467, column 18498
+
+="ct-bar" ct:value="1"></line><line x1="245.53466796875" x2="245.53466796875" y1="210" y2="145" class="ct-bar" ct:value="2"></line
+
+Warning: Attribute ct:value is not serializable as XML 1.0.
+
+From line 2467, column 18506; to line 2467, column 18601
+
+="ct-bar" ct:value="2"></line><line x1="281.08642578125" x2="281.08642578125" y1="210" y2="177.5" class="ct-bar" ct:value="1"></line
+
+Error: Attribute ct:value not allowed on element line at this point.
+
+From line 2467, column 18506; to line 2467, column 18601
+
+="ct-bar" ct:value="2"></line><line x1="281.08642578125" x2="281.08642578125" y1="210" y2="177.5" class="ct-bar" ct:value="1"></line
+
+Warning: Attribute ct:value is not serializable as XML 1.0.
+
+From line 2467, column 18609; to line 2467, column 18704
+
+="ct-bar" ct:value="1"></line><line x1="316.63818359375" x2="316.63818359375" y1="210" y2="177.5" class="ct-bar" ct:value="1"></line
+
+Error: Attribute ct:value not allowed on element line at this point.
+
+From line 2467, column 18609; to line 2467, column 18704
+
+="ct-bar" ct:value="1"></line><line x1="316.63818359375" x2="316.63818359375" y1="210" y2="177.5" class="ct-bar" ct:value="1"></line
+
+Warning: Attribute ct:value is not serializable as XML 1.0.
+
+From line 2467, column 18712; to line 2467, column 18807
+
+="ct-bar" ct:value="1"></line><line x1="352.18994140625" x2="352.18994140625" y1="210" y2="112.5" class="ct-bar" ct:value="3"></line
+
+Error: Attribute ct:value not allowed on element line at this point.
+
+From line 2467, column 18712; to line 2467, column 18807
+
+="ct-bar" ct:value="1"></line><line x1="352.18994140625" x2="352.18994140625" y1="210" y2="112.5" class="ct-bar" ct:value="3"></line
+
+Warning: Attribute ct:value is not serializable as XML 1.0.
+
+From line 2467, column 18815; to line 2467, column 18910
+
+="ct-bar" ct:value="3"></line><line x1="387.74169921875" x2="387.74169921875" y1="210" y2="112.5" class="ct-bar" ct:value="3"></line
+
+Error: Attribute ct:value not allowed on element line at this point.
+
+From line 2467, column 18815; to line 2467, column 18910
+
+="ct-bar" ct:value="3"></line><line x1="387.74169921875" x2="387.74169921875" y1="210" y2="112.5" class="ct-bar" ct:value="3"></line
+
+Warning: Attribute ct:value is not serializable as XML 1.0.
+
+From line 2467, column 18918; to line 2467, column 19013
+
+="ct-bar" ct:value="3"></line><line x1="423.29345703125" x2="423.29345703125" y1="210" y2="177.5" class="ct-bar" ct:value="1"></line
+
+Error: Attribute ct:value not allowed on element line at this point.
+
+From line 2467, column 18918; to line 2467, column 19013
+
+="ct-bar" ct:value="3"></line><line x1="423.29345703125" x2="423.29345703125" y1="210" y2="177.5" class="ct-bar" ct:value="1"></line
+
+Warning: Attribute ct:value is not serializable as XML 1.0.
+
+From line 2467, column 19021; to line 2467, column 19116
+
+="ct-bar" ct:value="1"></line><line x1="458.84521484375" x2="458.84521484375" y1="210" y2="177.5" class="ct-bar" ct:value="1"></line
+
+Error: Attribute ct:value not allowed on element line at this point.
+
+From line 2467, column 19021; to line 2467, column 19116
+
+="ct-bar" ct:value="1"></line><line x1="458.84521484375" x2="458.84521484375" y1="210" y2="177.5" class="ct-bar" ct:value="1"></line
+
+Warning: Attribute ct:value is not serializable as XML 1.0.
+
+From line 2467, column 19124; to line 2467, column 19217
+
+="ct-bar" ct:value="1"></line><line x1="494.39697265625" x2="494.39697265625" y1="210" y2="210" class="ct-bar" ct:value="0"></line
+
+Error: Attribute ct:value not allowed on element line at this point.
+
+From line 2467, column 19124; to line 2467, column 19217
+
+="ct-bar" ct:value="1"></line><line x1="494.39697265625" x2="494.39697265625" y1="210" y2="210" class="ct-bar" ct:value="0"></line
+
+Warning: Attribute ct:value is not serializable as XML 1.0.
+
+From line 2467, column 19225; to line 2467, column 19318
+
+="ct-bar" ct:value="0"></line><line x1="529.94873046875" x2="529.94873046875" y1="210" y2="145" class="ct-bar" ct:value="2"></line
+
+Error: Attribute ct:value not allowed on element line at this point.
+
+From line 2467, column 19225; to line 2467, column 19318
+
+="ct-bar" ct:value="0"></line><line x1="529.94873046875" x2="529.94873046875" y1="210" y2="145" class="ct-bar" ct:value="2"></line
+
+Warning: Attribute ct:value is not serializable as XML 1.0.
+
+From line 2467, column 19326; to line 2467, column 19421
+
+="ct-bar" ct:value="2"></line><line x1="565.50048828125" x2="565.50048828125" y1="210" y2="112.5" class="ct-bar" ct:value="3"></line
+
+Error: Attribute ct:value not allowed on element line at this point.
+
+From line 2467, column 19326; to line 2467, column 19421
+
+="ct-bar" ct:value="2"></line><line x1="565.50048828125" x2="565.50048828125" y1="210" y2="112.5" class="ct-bar" ct:value="3"></line
+
+Warning: Attribute ct:value is not serializable as XML 1.0.
+
+From line 2467, column 19429; to line 2467, column 19522
+
+="ct-bar" ct:value="3"></line><line x1="601.05224609375" x2="601.05224609375" y1="210" y2="145" class="ct-bar" ct:value="2"></line
+
+Error: Attribute ct:value not allowed on element line at this point.
+
+From line 2467, column 19429; to line 2467, column 19522
+
+="ct-bar" ct:value="3"></line><line x1="601.05224609375" x2="601.05224609375" y1="210" y2="145" class="ct-bar" ct:value="2"></line
+
+Error: Bad value http://www.w3.org/2000/xmlns/ for the attribute xmlns (only http://www.w3.org/1999/xhtml permitted here).
+
+From line 2467, column 19650; to line 2467, column 19766
+
+h="35.5517578125" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 36px; height: 20px;">Merced
+
+Warning: Attribute xmlns is not serializable as XML 1.0.
+
+From line 2467, column 19650; to line 2467, column 19766
+
+h="35.5517578125" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 36px; height: 20px;">Merced
+
+Error: Bad value http://www.w3.org/2000/xmlns/ for the attribute xmlns (only http://www.w3.org/1999/xhtml permitted here).
+
+From line 2467, column 19900; to line 2467, column 20016
+
+h="35.5517578125" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 36px; height: 20px;">BMW</s
+
+Warning: Attribute xmlns is not serializable as XML 1.0.
+
+From line 2467, column 19900; to line 2467, column 20016
+
+h="35.5517578125" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 36px; height: 20px;">BMW</s
+
+Error: Bad value http://www.w3.org/2000/xmlns/ for the attribute xmlns (only http://www.w3.org/1999/xhtml permitted here).
+
+From line 2467, column 20145; to line 2467, column 20261
+
+h="35.5517578125" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 36px; height: 20px;">Citrõe
+
+Warning: Attribute xmlns is not serializable as XML 1.0.
+
+From line 2467, column 20145; to line 2467, column 20261
+
+h="35.5517578125" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 36px; height: 20px;">Citrõe
+
+Error: Bad value http://www.w3.org/2000/xmlns/ for the attribute xmlns (only http://www.w3.org/1999/xhtml permitted here).
+
+From line 2467, column 20395; to line 2467, column 20511
+
+h="35.5517578125" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 36px; height: 20px;">Porsch
+
+Warning: Attribute xmlns is not serializable as XML 1.0.
+
+From line 2467, column 20395; to line 2467, column 20511
+
+h="35.5517578125" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 36px; height: 20px;">Porsch
+
+Error: Bad value http://www.w3.org/2000/xmlns/ for the attribute xmlns (only http://www.w3.org/1999/xhtml permitted here).
+
+From line 2467, column 20643; to line 2467, column 20759
+
+h="35.5517578125" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 36px; height: 20px;">Fiat</
+
+Warning: Attribute xmlns is not serializable as XML 1.0.
+
+From line 2467, column 20643; to line 2467, column 20759
+
+h="35.5517578125" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 36px; height: 20px;">Fiat</
+
+Error: Bad value http://www.w3.org/2000/xmlns/ for the attribute xmlns (only http://www.w3.org/1999/xhtml permitted here).
+
+From line 2467, column 20890; to line 2467, column 21006
+
+h="35.5517578125" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 36px; height: 20px;">Kia</s
+
+Warning: Attribute xmlns is not serializable as XML 1.0.
+
+From line 2467, column 20890; to line 2467, column 21006
+
+h="35.5517578125" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 36px; height: 20px;">Kia</s
+
+Error: Bad value http://www.w3.org/2000/xmlns/ for the attribute xmlns (only http://www.w3.org/1999/xhtml permitted here).
+
+From line 2467, column 21135; to line 2467, column 21251
+
+h="35.5517578125" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 36px; height: 20px;">Jaguar
+
+Warning: Attribute xmlns is not serializable as XML 1.0.
+
+From line 2467, column 21135; to line 2467, column 21251
+
+h="35.5517578125" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 36px; height: 20px;">Jaguar
+
+Error: Bad value http://www.w3.org/2000/xmlns/ for the attribute xmlns (only http://www.w3.org/1999/xhtml permitted here).
+
+From line 2467, column 21384; to line 2467, column 21500
+
+h="35.5517578125" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 36px; height: 20px;">Nissan
+
+Warning: Attribute xmlns is not serializable as XML 1.0.
+
+From line 2467, column 21384; to line 2467, column 21500
+
+h="35.5517578125" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 36px; height: 20px;">Nissan
+
+Error: Bad value http://www.w3.org/2000/xmlns/ for the attribute xmlns (only http://www.w3.org/1999/xhtml permitted here).
+
+From line 2467, column 21630; to line 2467, column 21746
+
+h="35.5517578125" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 36px; height: 20px;">Seat</
+
+Warning: Attribute xmlns is not serializable as XML 1.0.
+
+From line 2467, column 21630; to line 2467, column 21746
+
+h="35.5517578125" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 36px; height: 20px;">Seat</
+
+Error: Bad value http://www.w3.org/2000/xmlns/ for the attribute xmlns (only http://www.w3.org/1999/xhtml permitted here).
+
+From line 2467, column 21877; to line 2467, column 21993
+
+h="35.5517578125" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 36px; height: 20px;">Tesla<
+
+Warning: Attribute xmlns is not serializable as XML 1.0.
+
+From line 2467, column 21877; to line 2467, column 21993
+
+h="35.5517578125" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 36px; height: 20px;">Tesla<
+
+Error: Bad value http://www.w3.org/2000/xmlns/ for the attribute xmlns (only http://www.w3.org/1999/xhtml permitted here).
+
+From line 2467, column 22124; to line 2467, column 22240
+
+h="35.5517578125" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 36px; height: 20px;">Renaul
+
+Warning: Attribute xmlns is not serializable as XML 1.0.
+
+From line 2467, column 22124; to line 2467, column 22240
+
+h="35.5517578125" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 36px; height: 20px;">Renaul
+
+Error: Bad value http://www.w3.org/2000/xmlns/ for the attribute xmlns (only http://www.w3.org/1999/xhtml permitted here).
+
+From line 2467, column 22374; to line 2467, column 22490
+
+h="35.5517578125" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 36px; height: 20px;">Jeep</
+
+Warning: Attribute xmlns is not serializable as XML 1.0.
+
+From line 2467, column 22374; to line 2467, column 22490
+
+h="35.5517578125" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 36px; height: 20px;">Jeep</
+
+Error: Bad value http://www.w3.org/2000/xmlns/ for the attribute xmlns (only http://www.w3.org/1999/xhtml permitted here).
+
+From line 2467, column 22619; to line 2467, column 22735
+
+h="35.5517578125" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 36px; height: 20px;">Cupra<
+
+Warning: Attribute xmlns is not serializable as XML 1.0.
+
+From line 2467, column 22619; to line 2467, column 22735
+
+h="35.5517578125" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 36px; height: 20px;">Cupra<
+
+Error: Bad value http://www.w3.org/2000/xmlns/ for the attribute xmlns (only http://www.w3.org/1999/xhtml permitted here).
+
+From line 2467, column 22867; to line 2467, column 22983
+
+h="35.5517578125" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 36px; height: 20px;">Peugeo
+
+Warning: Attribute xmlns is not serializable as XML 1.0.
+
+From line 2467, column 22867; to line 2467, column 22983
+
+h="35.5517578125" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 36px; height: 20px;">Peugeo
+
+Error: Bad value http://www.w3.org/2000/xmlns/ for the attribute xmlns (only http://www.w3.org/1999/xhtml permitted here).
+
+From line 2467, column 23116; to line 2467, column 23232
+
+h="35.5517578125" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 36px; height: 20px;">Ford</
+
+Warning: Attribute xmlns is not serializable as XML 1.0.
+
+From line 2467, column 23116; to line 2467, column 23232
+
+h="35.5517578125" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 36px; height: 20px;">Ford</
+
+Error: Bad value http://www.w3.org/2000/xmlns/ for the attribute xmlns (only http://www.w3.org/1999/xhtml permitted here).
+
+From line 2467, column 23363; to line 2467, column 23479
+
+h="35.5517578125" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 36px; height: 20px;">Opel</
+
+Warning: Attribute xmlns is not serializable as XML 1.0.
+
+From line 2467, column 23363; to line 2467, column 23479
+
+h="35.5517578125" height="20"><span class="ct-label ct-horizontal ct-end" xmlns="http://www.w3.org/2000/xmlns/" style="width: 36px; height: 20px;">Opel</
+
+Error: Bad value http://www.w3.org/2000/xmlns/ for the attribute xmlns (only http://www.w3.org/1999/xhtml permitted here).
+
+From line 2467, column 23591; to line 2467, column 23707
+
+"10" height="32.5" width="30"><span class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/" style="height: 33px; width: 30px;">0</spa
+
+Warning: Attribute xmlns is not serializable as XML 1.0.
+
+From line 2467, column 23591; to line 2467, column 23707
+
+"10" height="32.5" width="30"><span class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/" style="height: 33px; width: 30px;">0</spa
+
+Error: Bad value http://www.w3.org/2000/xmlns/ for the attribute xmlns (only http://www.w3.org/1999/xhtml permitted here).
+
+From line 2467, column 23814; to line 2467, column 23930
+
+"10" height="32.5" width="30"><span class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/" style="height: 33px; width: 30px;">1</spa
+
+Warning: Attribute xmlns is not serializable as XML 1.0.
+
+From line 2467, column 23814; to line 2467, column 23930
+
+"10" height="32.5" width="30"><span class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/" style="height: 33px; width: 30px;">1</spa
+
+Error: Bad value http://www.w3.org/2000/xmlns/ for the attribute xmlns (only http://www.w3.org/1999/xhtml permitted here).
+
+From line 2467, column 24039; to line 2467, column 24155
+
+"10" height="32.5" width="30"><span class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/" style="height: 33px; width: 30px;">2</spa
+
+Warning: Attribute xmlns is not serializable as XML 1.0.
+
+From line 2467, column 24039; to line 2467, column 24155
+
+"10" height="32.5" width="30"><span class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/" style="height: 33px; width: 30px;">2</spa
+
+Error: Bad value http://www.w3.org/2000/xmlns/ for the attribute xmlns (only http://www.w3.org/1999/xhtml permitted here).
+
+From line 2467, column 24261; to line 2467, column 24377
+
+"10" height="32.5" width="30"><span class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/" style="height: 33px; width: 30px;">3</spa
+
+Warning: Attribute xmlns is not serializable as XML 1.0.
+
+From line 2467, column 24261; to line 2467, column 24377
+
+"10" height="32.5" width="30"><span class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/" style="height: 33px; width: 30px;">3</spa
+
+Error: Bad value http://www.w3.org/2000/xmlns/ for the attribute xmlns (only http://www.w3.org/1999/xhtml permitted here).
+
+From line 2467, column 24485; to line 2467, column 24601
+
+"10" height="32.5" width="30"><span class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/" style="height: 33px; width: 30px;">4</spa
+
+Warning: Attribute xmlns is not serializable as XML 1.0.
+
+From line 2467, column 24485; to line 2467, column 24601
+
+"10" height="32.5" width="30"><span class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/" style="height: 33px; width: 30px;">4</spa
+
+Error: Bad value http://www.w3.org/2000/xmlns/ for the attribute xmlns (only http://www.w3.org/1999/xhtml permitted here).
+
+From line 2467, column 24707; to line 2467, column 24823
+
+"10" height="32.5" width="30"><span class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/" style="height: 33px; width: 30px;">5</spa
+
+Warning: Attribute xmlns is not serializable as XML 1.0.
+
+From line 2467, column 24707; to line 2467, column 24823
+
+"10" height="32.5" width="30"><span class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/" style="height: 33px; width: 30px;">5</spa
+
+Error: Bad value http://www.w3.org/2000/xmlns/ for the attribute xmlns (only http://www.w3.org/1999/xhtml permitted here).
+
+From line 2467, column 24928; to line 2467, column 25044
+
+x="10" height="30" width="30"><span class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/" style="height: 30px; width: 30px;">6</spa
+
+Warning: Attribute xmlns is not serializable as XML 1.0.
+
+From line 2467, column 24928; to line 2467, column 25044
+
+x="10" height="30" width="30"><span class="ct-label ct-vertical ct-start" xmlns="http://www.w3.org/2000/xmlns/" style="height: 30px; width: 30px;">6</spa
+
+Error: Stray end tag style.
+
+From line 2482, column 1; to line 2482, column 8
+
+js"></script>↩↩</body></html>↩</style>
+
+Error: Stray end tag style.
+
+From line 2482, column 1; to line 2482, column 8
+
+js"></script>↩↩</body></html>↩</style>
+
+Error: Stray end tag style.
+
+From line 2483, column 1; to line 2483, column 8
+
+ipt>↩↩</body></html>↩</style>↩</style>
